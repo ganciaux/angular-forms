@@ -1,0 +1,112 @@
+export interface Form {
+  id: string;
+  title: string;
+  description?: string;
+  pages: FormPageLink[];
+  createdAt: Date;
+  updatedAt: Date;
+  status: 'draft' | 'published' | 'archived';
+  style?: FormStyle;
+}
+
+export interface FormStyle {
+  theme: 'light' | 'dark' | 'custom';
+  primaryColor?: string;
+  fontFamily?: string;
+  //Other styles
+}
+
+export interface FormPageLink {
+  pageId: string;
+  order: number;
+}
+
+export interface Page {
+  id: string;
+  title: string;
+  sections: PageSectionLink[];
+  style?: PageStyle;
+}
+
+export interface PageStyle {
+  backgroundColor?: string;
+  headerImage?: string;
+  //Other page styles
+}
+
+export interface PageSectionLink {
+  sectionId: string;
+  order: number;
+}
+
+export interface Section {
+  id: string;
+  title?: string;
+  items: SectionItemLink[];
+  style?: SectionStyle;
+}
+
+export interface SectionStyle {
+  borderColor?: string;
+  backgroundColor?: string;
+  //Other section styles
+}
+
+export interface SectionItemLink {
+  itemId: string;
+  order: number;
+}
+
+export interface Item {
+  id: string;
+  type: ItemType;
+  content: string;
+  required?: boolean;
+  options?: ItemOption[];
+  style?: ItemStyle;
+}
+
+export type ItemType = 'question' | 'text' | 'title' | 'paragraph' | 'image';
+
+export type QuestionType = 'text' | 'number' | 'singleChoice' | 'multipleChoice' | 'date';
+
+export interface ItemStyle {
+  fontWeight?: 'normal' | 'bold';
+  fontSize?: string;
+  textColor?: string;
+  //Other item styles
+}
+
+export interface ItemOption {
+  id: string;
+  value: string;
+  label: string;
+}
+
+export interface Answer {
+  id: string;
+  itemId: string;
+  value: string | string[] | number | Date;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface UserResponse {
+  id: string;
+  formId: string;
+  userId: string;
+  answers: Answer[];
+  currentPageId: string;
+  currentSectionId?: string;
+  startedAt: Date;
+  lastUpdatedAt: Date;
+  completedAt?: Date;
+  status: 'inProgress' | 'completed';
+}
+
+export interface User {
+  id: string;
+  username: string;
+  email: string;
+  role: 'admin' | 'client';
+}
