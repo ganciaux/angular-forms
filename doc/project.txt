@@ -1,0 +1,22 @@
+/src
+ ├── /app
+ │    ├── /core
+ │    ├── /shared
+ │    ├── /features
+ │    │    ├── /questionnaire
+ │    │    │    ├── /components
+ │    │    │    ├── /services
+ │    │    │    ├── /models
+ │    │    │    ├── /state
+ │    │    │    └── questionnaire.module.ts
+ │    ├── /auth
+ │    │    ├── /components
+ │    │    ├── /services
+ │    │    ├── /models
+ │    │    └── auth.module.ts
+ │    └── app.module.ts
+ ├── /assets
+ ├── /environments
+ ├── /styles
+ ├── /i18n
+ └── /tests
