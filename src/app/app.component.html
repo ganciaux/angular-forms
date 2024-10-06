@@ -1,1 +1,26 @@
-<router-outlet />
+<!-- Fixed Header -->
+<mat-toolbar class="header">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My Application</span>
+</mat-toolbar>
+
+<!-- Main container for sidenav and content, placed under the header -->
+<mat-sidenav-container class="main-container">
+  <!-- Sidebar -->
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav">
+    <mat-nav-list>
+      <a mat-list-item href="#">Dashboard</a>
+      <a mat-list-item href="#">Forms</a>
+      <a mat-list-item href="#">Settings</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content class="content">
+    <div class="body">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -3,7 +3,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 /*
 function ...ServiceFactory(): ...Service {
   return environment.production
@@ -21,5 +21,6 @@ export const appConfig: ApplicationConfig = {
       provide: ...Service,
       useFactory: ...ServiceFactory,
     },*/
-  ]
+    { provide: MatSlideToggleModule, useValue: [] },
+  ],
 };
