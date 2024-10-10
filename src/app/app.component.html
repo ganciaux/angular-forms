@@ -1,37 +1,27 @@
 <mat-sidenav-container fullscreen>
-
   <mat-sidenav #start (click)="start.close()">
-
     <mat-nav-list>
-
       <a mat-list-item routerLink="/">
         <mat-icon>library_books</mat-icon>
-        <span>Courses</span>
+        <span>Liste</span>
       </a>
 
-      <a mat-list-item routerLink="/lessons">
-        <mat-icon>search</mat-icon>
-        <span>Lessons</span>
+      <a mat-list-item [routerLink]="['forms','add']">
+        <mat-icon>add</mat-icon>
+        <span>Ajouter</span>
       </a>
-
     </mat-nav-list>
-
   </mat-sidenav>
 
   <mat-toolbar color="primary">
-
     <div class="toolbar-tools">
-
       <button mat-icon-button (click)="start.open('mouse')">
         <mat-icon>menu</mat-icon>
       </button>
 
       <div class="filler"></div>
-
     </div>
-
   </mat-toolbar>
 
-  <router-outlet/>
-
+  <router-outlet />
 </mat-sidenav-container>

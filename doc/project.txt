@@ -3,12 +3,12 @@
  │    ├── /core
  │    ├── /shared
  │    ├── /features
- │    │    ├── /questionnaire
+ │    │    ├── /form
  │    │    │    ├── /components
  │    │    │    ├── /services
  │    │    │    ├── /models
  │    │    │    ├── /state
- │    │    │    └── questionnaire.module.ts
+ │    │    │    └── form.module.ts
  │    ├── /auth
  │    │    ├── /components
  │    │    ├── /services

@@ -1,0 +1,14 @@
+mat-list-item {
+  display: flex;
+  align-items: center; /* vertical center icon and text */
+}
+
+mat-nav-list mat-icon {
+  margin-right: 8px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+span {
+  vertical-align: middle;
+}

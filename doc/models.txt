@@ -5,6 +5,7 @@ export interface Form {
   pages: FormPageLink[];
   createdAt: Date;
   updatedAt: Date;
+  version: number;
   status: 'draft' | 'published' | 'archived';
   style?: FormStyle;
 }
@@ -17,6 +18,7 @@ export interface FormStyle {
 }
 
 export interface FormPageLink {
+  formId: string;
   pageId: string;
   order: number;
 }
@@ -62,13 +64,21 @@ export interface Item {
   type: ItemType;
   content: string;
   required?: boolean;
+  questionType?: QuestionType;
   options?: ItemOption[];
   style?: ItemStyle;
 }
 
 export type ItemType = 'question' | 'text' | 'title' | 'paragraph' | 'image';
 
-export type QuestionType = 'text' | 'number' | 'singleChoice' | 'multipleChoice' | 'date';
+export type QuestionType = 
+  | 'shortText'       
+  | 'longText'        
+  | 'number'          
+  | 'singleChoice'    
+  | 'multipleChoice'  
+  | 'date'            
+  | 'rating';         
 
 export interface ItemStyle {
   fontWeight?: 'normal' | 'bold';
@@ -102,6 +112,7 @@ export interface UserResponse {
   lastUpdatedAt: Date;
   completedAt?: Date;
   status: 'inProgress' | 'completed';
+  version: number;
 }
 
 export interface User {
