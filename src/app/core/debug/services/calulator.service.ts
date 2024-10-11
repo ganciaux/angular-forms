@@ -17,4 +17,9 @@ export class CalulatorService {
     this.loggerService.log("CalulatorService: substract()")
     return a - b
   }
+
+  return(a: number): number {
+    this.loggerService.log("CalulatorService: return()")
+    return this.loggerService.return(a)
+  }
 }

@@ -4,6 +4,7 @@ import { routes } from './app.routes';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { provideHttpClient } from '@angular/common/http';
 /*
 function ...ServiceFactory(): ...Service {
   return environment.production
@@ -14,6 +15,7 @@ function ...ServiceFactory(): ...Service {
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(),
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), provideAnimationsAsync(),
     /*
