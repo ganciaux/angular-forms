@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
 import {MatGridListModule} from '@angular/material/grid-list';
+import { LoadingComponent } from './core/components/loading/loading.component'
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatSlideToggleModule,
     MatProgressSpinnerModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    LoadingComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
