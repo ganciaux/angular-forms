@@ -4,7 +4,8 @@ import { routes } from './app.routes';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
+import { loadingInterceptor } from './core/services/loading/loading.interceptor';
 /*
 function ...ServiceFactory(): ...Service {
   return environment.production
@@ -15,7 +16,12 @@ function ...ServiceFactory(): ...Service {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideHttpClient(),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors([
+        loadingInterceptor
+      ])
+    ),
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes), provideAnimationsAsync(),
     /*
