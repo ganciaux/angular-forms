@@ -1,2 +1,41 @@
-<p>form-edit works!</p>
-<p>data:{{form() | json}}</p>
+<div class="form">
+  <h3>Edition du formulaire '{{ form()?.title }}'</h3>
+  <form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Titre</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    @if(getControl('title').hasError('required')) {
+    <mat-error> Le titre est requis. </mat-error>
+    }
+    <mat-form-field>
+      <mat-label>Statut</mat-label>
+      <mat-select formControlName="status">
+        @for(status of formStatus; track status){
+        <mat-option [value]="status"> {{ status }} </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+    @if(getControl('status').hasError('required')) {
+    <mat-error> Le titre est requis. </mat-error>
+    }
+    <mat-form-field>
+      <mat-label>description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    @if(getControl('description').hasError('required')) {
+    <mat-error> Le titre est requis. </mat-error>
+    }
+    <button
+      mat-raised-button
+      class="form-button"
+      [disabled]="formGroup.invalid"
+      type="submit"
+    >
+      Modifier
+    </button>
+    <button mat-raised-button [routerLink]="['/forms']" class="form-button">
+      retour
+    </button>
+  </form>
+</div>

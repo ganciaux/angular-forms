@@ -4,6 +4,16 @@
   padding-top: 20px;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Ajoute un espace entre chaque champ */
+}
+
+.mat-form-field {
+  width: 100%; /* S'assure que chaque champ occupe toute la largeur */
+}
+
 .form-field {
   width: 400px;
 }

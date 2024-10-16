@@ -10,6 +10,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
 import {MatGridListModule} from '@angular/material/grid-list';
 import { LoadingComponent } from './core/components/loading/loading.component'
+import { ReactiveFormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { LoadingComponent } from './core/components/loading/loading.component'
   imports: [
     RouterOutlet,
     RouterLink,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,

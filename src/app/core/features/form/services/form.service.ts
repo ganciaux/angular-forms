@@ -27,7 +27,15 @@ export class FormService {
     const forms$ = this.http.get<Form[]>(`${this.env.apiRoot}`, {
       params,
     })
-    const response = await firstValueFrom(forms$)
-    return response
+
+    return firstValueFrom(forms$)
+  }
+
+  async saveForm(formId: string, changes: Partial<Form>): Promise<Form> {
+    const form$ = this.http.put<Form>(
+      `${this.env.apiRoot}/${formId}`,
+      changes,
+    )
+    return firstValueFrom(form$)
   }
 }
