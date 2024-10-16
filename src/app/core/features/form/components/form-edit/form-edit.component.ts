@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatButtonModule } from '@angular/material/button'
 import { statusValidator } from '../../validators/form-validators'
+import { FormErrorComponent } from '../../../../components/form-error/form-error.component'
 
 @Component({
   selector: 'app-form-edit',
@@ -28,6 +29,7 @@ import { statusValidator } from '../../validators/form-validators'
     MatFormFieldModule,
     MatButtonModule,
     RouterLink,
+    FormErrorComponent,
   ],
   templateUrl: './form-edit.component.html',
   styleUrl: './form-edit.component.css',
@@ -88,7 +90,6 @@ export class FormEditComponent {
   }
 
   getControl(controlName: string): FormControl {
-    return this.formGroup.get(controlName) as FormControl;
+    return this.formGroup.get(controlName) as FormControl
   }
-
 }

@@ -5,9 +5,7 @@
       <mat-label>Titre</mat-label>
       <input matInput formControlName="title" />
     </mat-form-field>
-    @if(getControl('title').hasError('required')) {
-    <mat-error> Le titre est requis. </mat-error>
-    }
+    <app-form-error [control]="getControl('title')"></app-form-error>
     <mat-form-field>
       <mat-label>Statut</mat-label>
       <mat-select formControlName="status">
@@ -16,16 +14,12 @@
         }
       </mat-select>
     </mat-form-field>
-    @if(getControl('status').hasError('required')) {
-    <mat-error> Le titre est requis. </mat-error>
-    }
+    <app-form-error [control]="getControl('status')"></app-form-error>
     <mat-form-field>
       <mat-label>description</mat-label>
       <textarea matInput formControlName="description"></textarea>
     </mat-form-field>
-    @if(getControl('description').hasError('required')) {
-    <mat-error> Le titre est requis. </mat-error>
-    }
+    <app-form-error [control]="getControl('description')"></app-form-error>
     <button
       mat-raised-button
       class="form-button"
