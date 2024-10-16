@@ -1,16 +1,64 @@
 {
-    "forms": [
-      {
-        "id": 1,
-        "title": "Survey Form",
-        "description": "A sample survey form",
-        "status": "draft"
-      },
-      {
-        "id": 2,
-        "title": "Feedback Form",
-        "description": "Form to collect user feedback",
-        "status": "published"
-      }
-    ]
-  }
+  "forms": [
+    {
+      "id": 1,
+      "title": "Survey Form",
+      "description": "A sample survey form",
+      "status": "draft"
+    },
+    {
+      "id": 2,
+      "title": "Feedback Form",
+      "description": "Form to collect user feedback",
+      "status": "published"
+    },
+    {
+      "id": 3,
+      "title": "Registration Form",
+      "description": "Form to register new users",
+      "status": "archived"
+    },
+    {
+      "id": 4,
+      "title": "Order Form",
+      "description": "Form for placing product orders",
+      "status": "published"
+    },
+    {
+      "id": 5,
+      "title": "Job Application Form",
+      "description": "A form for job applications",
+      "status": "draft"
+    },
+    {
+      "id": 6,
+      "title": "Contact Us Form",
+      "description": "Form for contacting customer service",
+      "status": "published"
+    },
+    {
+      "id": 7,
+      "title": "Newsletter Signup Form",
+      "description": "Form to subscribe to our newsletter",
+      "status": "published"
+    },
+    {
+      "id": 8,
+      "title": "Event Registration Form",
+      "description": "Form for event attendees registration",
+      "status": "archived"
+    },
+    {
+      "id": 9,
+      "title": "Product Feedback Form",
+      "description": "Collect product-specific feedback from users",
+      "status": "draft"
+    },
+    {
+      "id": 10,
+      "title": "Expense Report Form",
+      "description": "Form to report company expenses",
+      "status": "published"
+    }
+  ]
+}
