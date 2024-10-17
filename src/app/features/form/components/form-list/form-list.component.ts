@@ -8,8 +8,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { FormsModule } from '@angular/forms'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { CardComponent } from '../../../../components/card/card.component'
 import { RouterLink } from '@angular/router'
+import { CardComponent } from '../../../../core/components/card/card.component'
 
 @Component({
   selector: 'app-form-list',

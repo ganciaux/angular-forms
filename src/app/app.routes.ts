@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { FormListComponent } from './core/features/form/components/form-list/form-list.component';
-import { FormAddComponent } from './core/features/form/components/form-add/form-add.component';
-import { FormEditComponent } from './core/features/form/components/form-edit/form-edit.component';
-import { FormViewComponent } from './core/features/form/components/form-view/form-view.component';
+import { FormListComponent } from './features/form/components/form-list/form-list.component';
+import { FormAddComponent } from './features/form/components/form-add/form-add.component';
+import { FormEditComponent } from './features/form/components/form-edit/form-edit.component';
+import { FormViewComponent } from './features/form/components/form-view/form-view.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 
 export const routes: Routes = [

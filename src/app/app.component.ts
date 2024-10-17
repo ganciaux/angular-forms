@@ -10,7 +10,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
 import {MatGridListModule} from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms'
-import { LoadingComponent } from './core/features/loading/components/loading.component'
+import { LoadingComponent } from './features/loading/components/loading.component'
+
 
 @Component({
   selector: 'app-root',

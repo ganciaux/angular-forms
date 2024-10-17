@@ -16,7 +16,8 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatButtonModule } from '@angular/material/button'
 import { statusValidator } from '../../validators/form-validators'
-import { FormErrorComponent } from '../../../../components/form-error/form-error.component'
+import { FormErrorComponent } from '../../../../core/components/form-error/form-error.component'
+
 
 @Component({
   selector: 'app-form-edit',

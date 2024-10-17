@@ -5,7 +5,7 @@ import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
-import { loadingInterceptor } from './core/features/loading/services/loading.interceptor';
+import { loadingInterceptor } from './features/loading/services/loading.interceptor';
 
 /*
 function ...ServiceFactory(): ...Service {
