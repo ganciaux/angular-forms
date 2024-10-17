@@ -9,8 +9,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
 import {MatGridListModule} from '@angular/material/grid-list';
-import { LoadingComponent } from './core/components/loading/loading.component'
 import { ReactiveFormsModule } from '@angular/forms'
+import { LoadingComponent } from './core/features/loading/components/loading.component'
 
 @Component({
   selector: 'app-root',
