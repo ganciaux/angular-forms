@@ -1,21 +1,20 @@
-<div class="form">
-  <h3>Liste des formulaires</h3>
-  <mat-form-field class="form-field">
-    <mat-label>Rechercher un formulaire</mat-label>
-    <input matInput type="text" [(ngModel)]="value" />
-    @if (valueInput()) {
-    <button matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
-      <mat-icon>close</mat-icon>
-    </button>
-    }
-  </mat-form-field>
-  <br>
-  <button mat-raised-button [routerLink]="['/forms', 'add']" class="form-button">Ajouter</button>
-  <br>
-  @for(f of formFilter(); track f.id){
-    <app-form-card [form]="f"></app-form-card>
+<h3>Liste des formulaires</h3>
+<mat-form-field class="form-field">
+  <mat-label>Rechercher un formulaire</mat-label>
+  <input matInput type="text" [(ngModel)]="value" />
+  @if (valueInput()) {
+  <button matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+    <mat-icon>close</mat-icon>
+  </button>
   }
-  @empty {
-    <app-card [text]="formEmpty(value)"></app-card>
-  }
-</div>
+</mat-form-field>
+<br />
+<button mat-raised-button [routerLink]="['/forms', 'add']" class="form-button">
+  Ajouter
+</button>
+<br />
+@for(f of formFilter(); track f.id){
+<app-form-card [form]="f"></app-form-card>
+} @empty {
+<app-card [text]="formEmpty(value)"></app-card>
+}

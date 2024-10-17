@@ -18,12 +18,18 @@
       <button mat-icon-button (click)="start.open('mouse')">
         <mat-icon>menu</mat-icon>
       </button>
-
-      <div class="filler"></div>
+      <div class="spacer"></div>
+      <button mat-icon-button [routerLink]="['login']" class="right-button">
+        <mat-icon>login</mat-icon>
+      </button>
+      <button mat-icon-button (click)="onLogout()" class="right-button">
+        <mat-icon>logout</mat-icon>
+      </button>
     </div>
   </mat-toolbar>
-
-  <app-loading />
-
-  <router-outlet />
+  
+  <div class="app-main-container">
+    <app-loading />
+    <router-outlet />
+  </div>
 </mat-sidenav-container>

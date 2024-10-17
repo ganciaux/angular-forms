@@ -1,15 +1,26 @@
-
 <mat-card class="form-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title>{{form().title}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{form().title}}</p>
-    </mat-card-content>
-    <mat-card-footer class="form-card-footer">
-      <mat-chip-set aria-label="forms">
-        <button mat-raised-button [routerLink]="['/forms', 'edit', form().id]" class="form-card-button">Modifier</button>
-        <button mat-raised-button (click)="formDelete(form().id)" class="form-card-button">Supprimer</button>
-      </mat-chip-set>
-    </mat-card-footer>
-  </mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ form().title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ form().title }}</p>
+  </mat-card-content>
+  <mat-card-footer class="form-card-footer">
+    <mat-chip-set aria-label="forms">
+      <button
+        mat-raised-button
+        [routerLink]="['/forms', 'edit', form().id]"
+        class="form-card-button"
+      >
+        Modifier
+      </button>
+      <button
+        mat-raised-button
+        (click)="formDelete(form().id)"
+        class="form-card-button"
+      >
+        Supprimer
+      </button>
+    </mat-chip-set>
+  </mat-card-footer>
+</mat-card>

@@ -1,35 +1,33 @@
-<div class="form">
-  <h3>Edition du formulaire '{{ form()?.title }}'</h3>
-  <form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
-    <mat-form-field>
-      <mat-label>Titre</mat-label>
-      <input matInput formControlName="title" />
-    </mat-form-field>
-    <app-form-error [control]="getControl('title')"></app-form-error>
-    <mat-form-field>
-      <mat-label>Statut</mat-label>
-      <mat-select formControlName="status">
-        @for(status of formStatus; track status){
-        <mat-option [value]="status"> {{ status }} </mat-option>
-        }
-      </mat-select>
-    </mat-form-field>
-    <app-form-error [control]="getControl('status')"></app-form-error>
-    <mat-form-field>
-      <mat-label>description</mat-label>
-      <textarea matInput formControlName="description"></textarea>
-    </mat-form-field>
-    <app-form-error [control]="getControl('description')"></app-form-error>
-    <button
-      mat-raised-button
-      class="form-button"
-      [disabled]="formGroup.invalid"
-      type="submit"
-    >
-      Modifier
-    </button>
-    <button mat-raised-button [routerLink]="['/forms']" class="form-button">
-      retour
-    </button>
-  </form>
-</div>
+<h3>Edition du formulaire '{{ form()?.title }}'</h3>
+<form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Titre</mat-label>
+    <input matInput formControlName="title" />
+  </mat-form-field>
+  <app-form-error [control]="getControl('title')"></app-form-error>
+  <mat-form-field>
+    <mat-label>Statut</mat-label>
+    <mat-select formControlName="status">
+      @for(status of formStatus; track status){
+      <mat-option [value]="status"> {{ status }} </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+  <app-form-error [control]="getControl('status')"></app-form-error>
+  <mat-form-field>
+    <mat-label>description</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+  <app-form-error [control]="getControl('description')"></app-form-error>
+  <button
+    mat-raised-button
+    class="form-button"
+    [disabled]="formGroup.invalid"
+    type="submit"
+  >
+    Modifier
+  </button>
+  <button mat-raised-button [routerLink]="['/forms']" class="form-button">
+    retour
+  </button>
+</form>

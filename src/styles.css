@@ -1,4 +1,4 @@
-.form {
+.app-main-container {
   max-width: 800px;
   margin: 0 auto;
   padding-top: 20px;
@@ -33,4 +33,18 @@
 
 .form-button {
   margin-bottom: 20px;
+}
+
+.toolbar-tools {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+.right-button {
+  margin-left: 10px; /* Ajuste la valeur si besoin */
 }

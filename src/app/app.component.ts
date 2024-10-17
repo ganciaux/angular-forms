@@ -8,10 +8,9 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { MatMenuModule } from '@angular/material/menu'
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list'
 import { ReactiveFormsModule } from '@angular/forms'
 import { LoadingComponent } from './features/loading/components/loading.component'
-
 
 @Component({
   selector: 'app-root',
@@ -29,12 +28,15 @@ import { LoadingComponent } from './features/loading/components/loading.componen
     MatProgressSpinnerModule,
     MatMenuModule,
     MatGridListModule,
-    LoadingComponent
+    LoadingComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  onLogout() {
+    throw new Error('Method not implemented.')
+  }
   title = 'angular-forms'
   opened = false
 }
