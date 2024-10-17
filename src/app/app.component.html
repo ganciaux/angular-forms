@@ -6,7 +6,7 @@
         <span>Liste</span>
       </a>
 
-      <a mat-list-item [routerLink]="['forms','add']">
+      <a mat-list-item [routerLink]="['forms', 'add']">
         <mat-icon>add</mat-icon>
         <span>Ajouter</span>
       </a>
@@ -15,19 +15,24 @@
 
   <mat-toolbar color="primary">
     <div class="toolbar-tools">
+      @if(isLoggedIn()) {
       <button mat-icon-button (click)="start.open('mouse')">
         <mat-icon>menu</mat-icon>
       </button>
+      }
       <div class="spacer"></div>
-      <button mat-icon-button [routerLink]="['login']" class="right-button">
-        <mat-icon>login</mat-icon>
-      </button>
+      @if(isLoggedIn()) {
       <button mat-icon-button (click)="onLogout()" class="right-button">
         <mat-icon>logout</mat-icon>
       </button>
+      }@else{
+      <button mat-icon-button [routerLink]="['login']" class="right-button">
+        <mat-icon>login</mat-icon>
+      </button>
+      }
     </div>
   </mat-toolbar>
-  
+
   <div class="app-main-container">
     <app-loading />
     <router-outlet />
