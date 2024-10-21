@@ -1,1 +1,25 @@
-<p>auth works!</p>
+<h3>Login</h3>
+<form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Utilisateur</mat-label>
+      <input matInput formControlName="username"/>
+    </mat-form-field>
+    <app-form-error [control]="getControl('username')"></app-form-error>
+    <mat-form-field>
+      <mat-label>Mot de passe</mat-label>
+      <input matInput formControlName="password"/>
+    </mat-form-field>
+    <app-form-error [control]="getControl('password')"></app-form-error>
+    <button
+      mat-raised-button
+      class="form-button"
+      [disabled]="formGroup.invalid"
+      type="submit"
+    >
+      Login
+    </button>
+    <button mat-raised-button [routerLink]="['/forms']" class="form-button">
+      retour
+    </button>
+  </form>
+  

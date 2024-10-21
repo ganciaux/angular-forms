@@ -23,8 +23,7 @@ export class FormService {
     if (query) {
       params = params.set('query', query)
     }
-    console.log(this.env.apiRoot)
-    const forms$ = this.http.get<Form[]>(`${this.env.apiRoot}`, {
+    const forms$ = this.http.get<Form[]>(`${this.env.apiURL}/forms`, {
       params,
     })
 
@@ -33,7 +32,7 @@ export class FormService {
 
   async saveForm(formId: string, changes: Partial<Form>): Promise<Form> {
     const form$ = this.http.put<Form>(
-      `${this.env.apiRoot}/${formId}`,
+      `${this.env.apiURL}/forms/${formId}`,
       changes,
     )
     return firstValueFrom(form$)

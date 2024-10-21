@@ -6,9 +6,27 @@ import { FormViewComponent } from './features/form/components/form-view/form-vie
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component'
 import { AuthComponent } from './features/auth/components/auth.component'
 import { authGuard } from './core/guards/auth/auth.guard'
+import { loginGuard } from './core/guards/auth/login.guard'
+import { UserAccountComponent } from './features/user/components/user-account/user-account.component'
 
 export const routes: Routes = [
-  { path: 'login', component: AuthComponent, title: 'login' },
+  {
+    path: 'login',
+    canActivate: [loginGuard],
+    component: AuthComponent,
+    title: 'login',
+  },
+  {
+    path: 'users',
+    canActivateChild: [authGuard],
+    children: [
+      {
+        path: 'account',
+        component: UserAccountComponent,
+        title: 'account',
+      },
+    ],
+  },
   {
     path: 'forms',
     canActivateChild: [authGuard],

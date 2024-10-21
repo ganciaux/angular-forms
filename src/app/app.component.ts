@@ -44,6 +44,6 @@ export class AppComponent {
   opened = false
 
   onLogout() {
-    throw new Error('Method not implemented.')
+    this.authService.logout();
   }
 }

@@ -60,5 +60,28 @@
       "description": "Form to report company expenses",
       "status": "published"
     }
+  ],
+  "users": [
+    {
+      "username": "user",
+      "name": "user",
+      "password": "user",
+      "email": "user@user.com",
+      "role": "admin"
+    },
+    {
+      "username": "ghis",
+      "name": "ghislain",
+      "password": "ghis",
+      "email": "ghislain@gmail.com",
+      "role": "admin"
+    },
+    {
+      "username": "aurel",
+      "name": "aurélie",
+      "password": "aurel",
+      "email": "aurelie@hotmail.com",
+      "role": "gest"
+    }
   ]
 }
