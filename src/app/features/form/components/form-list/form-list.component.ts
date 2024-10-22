@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { RouterLink } from '@angular/router'
 import { CardComponent } from '../../../../core/components/card/card.component'
+import { DialogComponent } from '../../../../core/components/dialog/dialog/dialog.component'
 
 @Component({
   selector: 'app-form-list',
@@ -23,6 +24,7 @@ import { CardComponent } from '../../../../core/components/card/card.component'
     MatButtonModule,
     MatIconModule,
     RouterLink,
+    DialogComponent
   ],
   templateUrl: './form-list.component.html',
   styleUrl: './form-list.component.css',
