@@ -1,9 +1,16 @@
-import { Component, effect, inject, signal } from '@angular/core'
+import {
+  Component,
+  effect,
+  Inject,
+  inject,
+  Optional,
+  signal,
+} from '@angular/core'
 import { Form, FORM_STATUS } from '../../models/form.model'
 import { HttpClient } from '@angular/common/http'
 import { ActivatedRoute, Router, RouterLink } from '@angular/router'
 import { FormService } from '../../services/form.service'
-import { JsonPipe } from '@angular/common'
+import { CommonModule, JsonPipe } from '@angular/common'
 import {
   FormBuilder,
   FormControl,
@@ -17,7 +24,11 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatButtonModule } from '@angular/material/button'
 import { statusValidator } from '../../validators/form-validators'
 import { FormErrorComponent } from '../../../../core/components/form-error/form-error.component'
-
+import {
+  MAT_DIALOG_DATA,
+  MatDialogModule,
+  MatDialogRef,
+} from '@angular/material/dialog'
 
 @Component({
   selector: 'app-form-edit',
@@ -31,24 +42,17 @@ import { FormErrorComponent } from '../../../../core/components/form-error/form-
     MatButtonModule,
     RouterLink,
     FormErrorComponent,
+    CommonModule,
+    MatDialogModule,
   ],
   templateUrl: './form-edit.component.html',
   styleUrl: './form-edit.component.css',
 })
 export class FormEditComponent {
   formStatus = FORM_STATUS
-
-  async onSubmit() {
-    const formEdit = this.formGroup.value as Partial<Form>
-    try {
-      await this.formService.saveForm(this.formId(), formEdit)
-      this.router.navigate(['/forms'])
-    } catch (error) {
-      console.error(error)
-    }
-  }
   form = signal<Form | null>(null)
   formId = signal('')
+  dataForm: any
   httpClient = inject(HttpClient)
   route = inject(ActivatedRoute)
   router = inject(Router)
@@ -57,7 +61,11 @@ export class FormEditComponent {
 
   formGroup: FormGroup
 
-  constructor() {
+  constructor(
+    @Optional() @Inject(MAT_DIALOG_DATA) private data: any,
+    @Optional() private dialogRef: MatDialogRef<FormEditComponent>,
+  ) {
+    this.dataForm = data
     this.formGroup = this.fb.group({
       title: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
@@ -68,6 +76,7 @@ export class FormEditComponent {
     })
 
     this.loadForm().then(() => console.log('loading form...'))
+
     effect(() => {
       const currentForm = this.form()
       if (currentForm) {
@@ -78,12 +87,30 @@ export class FormEditComponent {
 
   async loadForm() {
     try {
-      this.formId.set(this.route.snapshot.params['id'])
+      if (this.data) {
+        this.formId.set(this.dataForm.data.id)
+      } else {
+        this.formId.set(this.route.snapshot.params['id'])
+      }
       if (this.formId()) {
         const form = await this.formService.loadForm({ formId: this.formId() })
         this.form.set(form[0])
       } else {
         console.error('missing form id')
+      }
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+  async onSubmit() {
+    const formEdit = this.formGroup.value as Partial<Form>
+    try {
+      await this.formService.saveForm(this.formId(), formEdit)
+      if (this.data) {
+        this.dialogRef.close({ ...formEdit, id: this.formId() })
+      } else {
+        this.router.navigate(['/forms'])
       }
     } catch (error) {
       console.error(error)

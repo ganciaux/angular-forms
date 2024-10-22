@@ -64,4 +64,12 @@ export class FormListComponent {
       ? `Aucun formulaire contient: ${value}`
       : 'Aucun formulaire trouvé'
   }
+  onFormUpdated(updatedForm: Form) {
+    console.log('onFormUpdated:', updatedForm)
+    const forms = this.forms();
+    const newForms = forms.map(form => (
+      form.id === updatedForm.id ? updatedForm : form
+    ));
+    this.forms.set(newForms);
+  }
 }

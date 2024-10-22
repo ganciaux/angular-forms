@@ -16,6 +16,13 @@
       </button>
       <button
         mat-raised-button
+        class="form-card-button"
+        (click)="openEditFormDialog()"
+      >
+        popup
+      </button>
+      <button
+        mat-raised-button
         (click)="formDelete(form().id)"
         class="form-card-button"
       >

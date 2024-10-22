@@ -37,6 +37,10 @@
   margin-bottom: 20px;
 }
 
+.form-data {
+  margin: 20px;
+}
+
 .toolbar-tools {
   display: flex;
   align-items: center;
