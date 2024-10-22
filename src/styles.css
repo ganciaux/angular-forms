@@ -1,3 +1,5 @@
+/* @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"; */
+
 .app-main-container {
   max-width: 800px;
   margin: 0 auto;
@@ -47,4 +49,24 @@
 
 .right-button {
   margin-left: 10px; /* Ajuste la valeur si besoin */
+}
+
+.mat-mdc-snack-bar-container.error {
+  --mdc-snackbar-container-color: #fc00ba;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.mat-mdc-snack-bar-container.info {
+  --mdc-snackbar-container-color: #2176f7;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.mat-mdc-snack-bar-container.warning {
+  --mdc-snackbar-container-color: #fcec01;
+  --mdc-snackbar-supporting-text-color: black;
+}
+
+.mat-mdc-snack-bar-container.success {
+  --mdc-snackbar-container-color: #4ad700;
+  --mdc-snackbar-supporting-text-color: black;
 }

@@ -1,11 +1,10 @@
-import { Injectable, signal } from '@angular/core';
-import { Message, MessageSeverity } from '../../models/message';
+import { Injectable, signal } from '@angular/core'
+import { Message, MessageSeverity } from '../../models/message'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MessagesService {
-
   #messageSignal = signal<Message | null>(null)
 
   message = this.#messageSignal.asReadonly()
