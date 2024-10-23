@@ -19,6 +19,7 @@ import { FormHoverBorderDirective } from '../../directives/form-hover-border.dir
   styleUrl: './form-card.component.css',
 })
 export class FormCardComponent {
+
   form = input.required<Form>()
   formUpdated = output<Form>()
   formDeleted = output<string>()
@@ -41,5 +42,19 @@ export class FormCardComponent {
       return
     }
     this.formUpdated.emit(editForm)
+  }
+
+  getStatusClass():string {
+    const status = this.form().status;
+    switch (status) {
+      case 'draft':
+        return 'form-status-draft';
+      case 'published':
+        return 'form-status-published';
+      case 'archived':
+        return 'form-status-archived';
+      default:
+        return '';
+    }
   }
 }

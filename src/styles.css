@@ -61,7 +61,7 @@
 }
 
 .right-button {
-  margin-left: 10px; /* Ajuste la valeur si besoin */
+  margin-left: 10px;
 }
 
 .mat-mdc-snack-bar-container.error {
@@ -70,7 +70,7 @@
 }
 
 .mat-mdc-snack-bar-container.info {
-  --mdc-snackbar-container-color: #17a2b8;
+  --mdc-snackbar-container-color: #42a5f5;
   --mdc-snackbar-supporting-text-color: white;
 }
 
@@ -82,4 +82,16 @@
 .mat-mdc-snack-bar-container.success {
   --mdc-snackbar-container-color: #28a745;
   --mdc-snackbar-supporting-text-color: black;
+}
+
+.mat-mdc-chip.form-status-draft .mdc-evolution-chip__text-label {
+  color: #42a5f5 !important;
+}
+
+.mat-mdc-chip.form-status-published .mdc-evolution-chip__text-label {
+  color: #28a745 !important;
+}
+
+.mat-mdc-chip.form-status-archived .mdc-evolution-chip__text-label {
+  color: #ba1a1a !important;
 }
