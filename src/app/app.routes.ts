@@ -8,6 +8,7 @@ import { AuthComponent } from './features/auth/components/auth.component'
 import { authGuard } from './core/guards/auth/auth.guard'
 import { loginGuard } from './core/guards/auth/login.guard'
 import { UserAccountComponent } from './features/user/components/user-account/user-account.component'
+import { formResolver } from './features/form/resolvers/form.resolver'
 
 export const routes: Routes = [
   {
@@ -45,6 +46,9 @@ export const routes: Routes = [
         path: 'edit/:id',
         component: FormEditComponent,
         title: 'form edit',
+        resolve: {
+          form: formResolver,
+        }
       },
       {
         path: ':id',

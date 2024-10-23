@@ -30,6 +30,11 @@ export class FormService {
     return firstValueFrom(forms$)
   }
 
+  async getFormById(formId: string): Promise<Form | null> {
+    const form$ = this.http.get<Form>(`${this.env.apiURL}/forms/${formId}`)
+    return firstValueFrom(form$)
+  }
+
   async saveForm(formId: string, changes: Partial<Form>): Promise<Form> {
     const form$ = this.http.put<Form>(
       `${this.env.apiURL}/forms/${formId}`,

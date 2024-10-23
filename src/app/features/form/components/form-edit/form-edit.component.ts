@@ -3,6 +3,7 @@ import {
   effect,
   Inject,
   inject,
+  OnInit,
   Optional,
   signal,
 } from '@angular/core'
@@ -48,7 +49,7 @@ import {
   templateUrl: './form-edit.component.html',
   styleUrl: './form-edit.component.css',
 })
-export class FormEditComponent {
+export class FormEditComponent implements OnInit {
   formStatus = FORM_STATUS
   form = signal<Form | null>(null)
   formId = signal('')
@@ -85,18 +86,22 @@ export class FormEditComponent {
     })
   }
 
+  ngOnInit() {
+    this.form.set(this.route.snapshot.data["form"]);
+  }
+  
   async loadForm() {
     try {
       if (this.data) {
         this.formId.set(this.dataForm.data.id)
+        if (this.formId()) {
+          const form = await this.formService.getFormById(this.formId())
+          this.form.set(form)
+        } else {
+          console.error('missing form id')
+        }
       } else {
         this.formId.set(this.route.snapshot.params['id'])
-      }
-      if (this.formId()) {
-        const form = await this.formService.loadForm({ formId: this.formId() })
-        this.form.set(form[0])
-      } else {
-        console.error('missing form id')
       }
     } catch (error) {
       console.error(error)
