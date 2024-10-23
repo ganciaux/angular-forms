@@ -6,6 +6,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { loadingInterceptor } from './features/loading/services/loading.interceptor';
+import { errorInterceptor } from './core/services/error/error.interceptor';
 
 /*
 function ...ServiceFactory(): ...Service {
@@ -20,7 +21,8 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(
       withFetch(),
       withInterceptors([
-        loadingInterceptor
+        loadingInterceptor,
+        errorInterceptor
       ])
     ),
     provideZoneChangeDetection({ eventCoalescing: true }), 
