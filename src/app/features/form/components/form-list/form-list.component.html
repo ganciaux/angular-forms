@@ -19,7 +19,11 @@
 </button>
 <br />
 @for(f of formFilter(); track f.id){
-<app-form-card [form]="f" (formUpdated)="onFormUpdated($event)"></app-form-card>
+<app-form-card
+  [form]="f"
+  (formUpdated)="onFormUpdated($event)"
+  (formDeleted)="onFormDeleted($event)"
+></app-form-card>
 } @empty {
 <app-card [text]="formEmpty(value)"></app-card>
 }

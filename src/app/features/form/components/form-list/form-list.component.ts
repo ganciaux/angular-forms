@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { RouterLink } from '@angular/router'
 import { CardComponent } from '../../../../core/components/card/card.component'
 import { DialogComponent } from '../../../../core/components/dialog/dialog/dialog.component'
+import { MessagesComponent } from '../../../../core/components/messages/messages/messages.component'
+import { MessagesService } from '../../../../core/services/messages/messages.service'
 
 @Component({
   selector: 'app-form-list',
@@ -24,15 +26,17 @@ import { DialogComponent } from '../../../../core/components/dialog/dialog/dialo
     MatButtonModule,
     MatIconModule,
     RouterLink,
-    DialogComponent
+    DialogComponent,
   ],
   templateUrl: './form-list.component.html',
   styleUrl: './form-list.component.css',
 })
 export class FormListComponent {
+  formService = inject(FormService)
+  messageService = inject(MessagesService)
+
   valueInput = signal('')
   forms = signal<Form[]>([])
-  formService = inject(FormService)
   formFilter = computed(() => {
     return this.forms().filter((f) =>
       f.title.toLowerCase().includes(this.valueInput().toLowerCase()),
@@ -67,11 +71,17 @@ export class FormListComponent {
       : 'Aucun formulaire trouvé'
   }
   onFormUpdated(updatedForm: Form) {
-    console.log('onFormUpdated:', updatedForm)
-    const forms = this.forms();
-    const newForms = forms.map(form => (
-      form.id === updatedForm.id ? updatedForm : form
-    ));
-    this.forms.set(newForms);
+    const forms = this.forms()
+    const newForms = forms.map((form) =>
+      form.id === updatedForm.id ? updatedForm : form,
+    )
+    this.forms.set(newForms)
+  }
+
+  onFormDeleted(formId: string) {
+    const forms = this.forms()
+    const newForms = forms.filter((form) => form.id !== formId)
+    this.forms.set(newForms)
+    this.messageService.showMessage('Suppression réussie', 'success')
   }
 }

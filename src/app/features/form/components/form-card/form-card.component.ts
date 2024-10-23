@@ -6,6 +6,9 @@ import { Form } from '../../models/form.model'
 import { RouterLink } from '@angular/router'
 import { DialogService } from '../../../../core/services/dialog/dialog.service'
 import { FormEditComponent } from '../form-edit/form-edit.component'
+import { DialogComponent } from '../../../../core/components/dialog/dialog/dialog.component'
+import { MatDialog } from '@angular/material/dialog'
+import { DialogMode } from '../../../../core/models/dialog-modes.enum'
 
 @Component({
   selector: 'app-form-card',
@@ -17,11 +20,18 @@ import { FormEditComponent } from '../form-edit/form-edit.component'
 export class FormCardComponent {
   form = input.required<Form>()
   formUpdated = output<Form>()
+  formDeleted = output<string>()
   dialogService = inject(DialogService)
+  dialog = inject(MatDialog)
 
-  formDelete(formId: string) {
-    throw new Error('Method not implemented.')
+  async formDelete(formId: string) {
+    const result = await this.dialogService.openDialog(DialogComponent, {data: {mode: DialogMode.DELETE}});
+    if (result === true) {
+      this.formDeleted.emit(formId)
+    } 
+    return 
   }
+
   async openEditFormDialog() {
     const editForm = await this.dialogService.openDialog(FormEditComponent, {
       data: this.form(),
@@ -29,7 +39,6 @@ export class FormCardComponent {
     if (!editForm) {
       return
     }
-    console.log(`Form edited:`, editForm)
     this.formUpdated.emit(editForm)
   }
 }

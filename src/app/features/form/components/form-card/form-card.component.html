@@ -1,6 +1,6 @@
 <mat-card class="form-card" appearance="outlined">
   <mat-card-header>
-    <mat-card-title>{{ form().title }}</mat-card-title>
+    <mat-card-title class="form-cursor-pointer" (click)="openEditFormDialog()">{{ form().title }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
     <p>{{ form().title }}</p>
@@ -13,13 +13,6 @@
         class="form-card-button"
       >
         Modifier
-      </button>
-      <button
-        mat-raised-button
-        class="form-card-button"
-        (click)="openEditFormDialog()"
-      >
-        popup
       </button>
       <button
         mat-raised-button

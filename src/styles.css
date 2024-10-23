@@ -41,6 +41,10 @@
   margin: 20px;
 }
 
+.form-cursor-pointer{
+  cursor: pointer;
+}
+
 .toolbar-tools {
   display: flex;
   align-items: center;

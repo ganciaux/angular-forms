@@ -1,3 +1,10 @@
-<h5>{{title()}}</h5>
-<button mat-raised-button type="button">Oui</button>
-<button mat-raised-button type="button">Non</button>
+<div class="dialog-padding">
+    <h2 mat-dialog-title>{{title}}</h2>
+    <mat-dialog-content>
+    <p>{{subtitle}}</p>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Non</button>
+    <button mat-button color="warn" (click)="onConfirm()">Oui</button>
+    </mat-dialog-actions>
+</div>
