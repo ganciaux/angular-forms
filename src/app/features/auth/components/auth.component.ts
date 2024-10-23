@@ -11,6 +11,7 @@ import { Router, RouterLink } from '@angular/router'
 import { FormErrorComponent } from '../../../core/components/form-error/form-error.component'
 import { MatInputModule } from '@angular/material/input'
 import { AuthService } from '../../../core/services/auth/auth.service'
+import { MessagesService } from '../../../core/services/messages/messages.service'
 
 @Component({
   selector: 'app-auth',
@@ -28,6 +29,7 @@ import { AuthService } from '../../../core/services/auth/auth.service'
 })
 export class AuthComponent {
   fb = inject(FormBuilder)
+  messagesService = inject(MessagesService);
   authService = inject(AuthService)
   router = inject(Router)
 
@@ -45,7 +47,7 @@ export class AuthComponent {
       await this.authService.login(username, password)
       await this.router.navigate(['/forms'])
     } catch (err) {
-      console.error(err)
+      this.messagesService.showMessage(''+err, 'error')
     }
   }
 

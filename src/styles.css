@@ -60,21 +60,21 @@
 }
 
 .mat-mdc-snack-bar-container.error {
-  --mdc-snackbar-container-color: #fc00ba;
+  --mdc-snackbar-container-color: #ba1a1a;
   --mdc-snackbar-supporting-text-color: white;
 }
 
 .mat-mdc-snack-bar-container.info {
-  --mdc-snackbar-container-color: #2176f7;
+  --mdc-snackbar-container-color: #17a2b8;
   --mdc-snackbar-supporting-text-color: white;
 }
 
 .mat-mdc-snack-bar-container.warning {
-  --mdc-snackbar-container-color: #fcec01;
+  --mdc-snackbar-container-color: #ffc107;
   --mdc-snackbar-supporting-text-color: black;
 }
 
 .mat-mdc-snack-bar-container.success {
-  --mdc-snackbar-container-color: #4ad700;
+  --mdc-snackbar-container-color: #28a745;
   --mdc-snackbar-supporting-text-color: black;
 }
