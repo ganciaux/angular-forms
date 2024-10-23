@@ -9,11 +9,12 @@ import { FormEditComponent } from '../form-edit/form-edit.component'
 import { DialogComponent } from '../../../../core/components/dialog/dialog/dialog.component'
 import { MatDialog } from '@angular/material/dialog'
 import { DialogMode } from '../../../../core/models/dialog-modes.enum'
+import { FormHoverBorderDirective } from '../../directives/form-hover-border.directive'
 
 @Component({
   selector: 'app-form-card',
   standalone: true,
-  imports: [MatCardModule, MatChipsModule, MatButtonModule, RouterLink],
+  imports: [MatCardModule, MatChipsModule, MatButtonModule, RouterLink, FormHoverBorderDirective],
   templateUrl: './form-card.component.html',
   styleUrl: './form-card.component.css',
 })

@@ -23,7 +23,7 @@ export class MessagesComponent {
       if (message) {
         const snackBarRef = this._snackBar.open(message.text, 'close', {
           panelClass: [message.severity],
-          duration:3000,
+          duration: 3000,
         })
         snackBarRef.afterDismissed().subscribe(() => {
           this.messagesService.clear()

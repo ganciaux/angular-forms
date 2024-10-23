@@ -1,6 +1,10 @@
-<mat-card class="form-card" appearance="outlined">
+<mat-card class="form-card" appearance="outlined" appFormHoverBorder>
   <mat-card-header>
-    <mat-card-title class="form-cursor-pointer" (click)="openEditFormDialog()">{{ form().title }}</mat-card-title>
+    <mat-card-title
+      class="form-cursor-pointer"
+      (click)="openEditFormDialog()"
+      >{{ form().title }}</mat-card-title
+    >
   </mat-card-header>
   <mat-card-content>
     <p>{{ form().title }}</p>

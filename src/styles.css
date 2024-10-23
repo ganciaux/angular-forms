@@ -41,8 +41,13 @@
   margin: 20px;
 }
 
-.form-cursor-pointer{
+.form-cursor-pointer {
   cursor: pointer;
+}
+
+.form-hover-weight {
+  font-weight: 500 !important;
+  color: #42a5f5;
 }
 
 .toolbar-tools {
