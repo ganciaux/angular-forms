@@ -4,11 +4,12 @@ import { FormAddComponent } from './features/form/components/form-add/form-add.c
 import { FormEditComponent } from './features/form/components/form-edit/form-edit.component'
 import { FormViewComponent } from './features/form/components/form-view/form-view.component'
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component'
-import { AuthComponent } from './features/auth/components/auth.component'
 import { authGuard } from './core/guards/auth/auth.guard'
 import { loginGuard } from './core/guards/auth/login.guard'
 import { UserAccountComponent } from './features/user/components/user-account/user-account.component'
 import { formResolver } from './features/form/resolvers/form.resolver'
+import { AuthComponent } from './features/auth/components/auth/auth.component'
+import { AuthAddComponent } from './features/auth/components/auth-add/auth-add.component'
 
 export const routes: Routes = [
   {
@@ -16,6 +17,12 @@ export const routes: Routes = [
     canActivate: [loginGuard],
     component: AuthComponent,
     title: 'login',
+  },
+  {
+    path: 'login/add',
+    canActivate: [loginGuard],
+    component: AuthAddComponent,
+    title: 'login add',
   },
   {
     path: 'users',

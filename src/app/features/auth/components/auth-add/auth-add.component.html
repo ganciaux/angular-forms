@@ -1,0 +1,23 @@
+<h3>Création de compte</h3>
+<form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Utilisateur</mat-label>
+    <input matInput formControlName="username"/>
+  </mat-form-field>
+  <app-form-error [control]="formControlService.getControl(formGroup,'username')"></app-form-error>
+  <mat-form-field>
+    <mat-label>Mot de passe</mat-label>
+    <input matInput formControlName="password"/>
+  </mat-form-field>
+  <app-form-error [control]="formControlService.getControl(formGroup,'password')"></app-form-error>
+  <div class="form-button-container">
+    <button
+      mat-flat-button
+      class="form-button"
+      [disabled]="formGroup.invalid || isSubmitting()"
+      type="submit"
+    >
+      Créér le compte
+    </button>
+  </div>
+</form>

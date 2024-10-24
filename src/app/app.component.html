@@ -1,11 +1,11 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #start (click)="start.close()">
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['users', 'account']">
+      <a mat-list-item [routerLink]="['users', 'account']" matTooltip="gestion du compte utilisateur">
         <mat-icon>account_circle</mat-icon>
-        <span>Account</span>
+        <span>Utilisateur:  {{authService.user()?.username}}</span>
       </a>
-      <a mat-list-item routerLink="/">
+      <a mat-list-item routerLink="/" matTooltip="Liste des formulaire">
         <mat-icon>library_books</mat-icon>
         <span>Formulaires</span>
       </a>
@@ -22,11 +22,11 @@
       <div class="spacer"></div>
       @if(isLoggedIn()) {
       <button mat-icon-button (click)="onLogout()" class="right-button">
-        <mat-icon>logout</mat-icon>
+        <mat-icon matTooltip="Déconnexion">logout</mat-icon>
       </button>
       }@else{
       <button mat-icon-button [routerLink]="['login']" class="right-button">
-        <mat-icon>login</mat-icon>
+        <mat-icon matTooltip="Connexion">login</mat-icon>
       </button>
       }
     </div>

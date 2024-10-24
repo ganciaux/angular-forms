@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { LoadingComponent } from './features/loading/components/loading.component'
 import { AuthService } from './core/services/auth/auth.service'
 import { MessagesComponent } from "./core/components/messages/messages/messages.component";
+import { MatTooltip } from '@angular/material/tooltip'
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,8 @@ import { MessagesComponent } from "./core/components/messages/messages/messages.
     MatMenuModule,
     MatGridListModule,
     LoadingComponent,
-    MessagesComponent
+    MessagesComponent,
+    MatTooltip
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

@@ -63,6 +63,7 @@
   ],
   "users": [
     {
+      "id": 1,
       "username": "user",
       "name": "user",
       "password": "user",
@@ -70,6 +71,7 @@
       "role": "admin"
     },
     {
+      "id": 2,
       "username": "ghis",
       "name": "ghislain",
       "password": "ghis",
@@ -77,6 +79,7 @@
       "role": "admin"
     },
     {
+      "id": 3,
       "username": "aurel",
       "name": "aurélie",
       "password": "aurel",

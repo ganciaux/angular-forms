@@ -1,0 +1,26 @@
+<h3>Login</h3>
+<form [formGroup]="formGroup" class="form-container" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-label>Utilisateur</mat-label>
+    <input matInput formControlName="username" placeholder="user" />
+  </mat-form-field>
+  <app-form-error [control]="getControl('username')"></app-form-error>
+  <mat-form-field>
+    <mat-label>Mot de passe</mat-label>
+    <input matInput formControlName="password" placeholder="user"/>
+  </mat-form-field>
+  <app-form-error [control]="getControl('password')"></app-form-error>
+  <div class="form-button-container">
+    <button
+      mat-flat-button
+      class="form-button"
+      [disabled]="formGroup.invalid"
+      type="submit"
+    >
+      Se connecter
+    </button>
+    <button mat-raised-button [routerLink]="['/login', 'add']" class="form-button">
+      Créer un compte
+    </button>
+  </div>
+</form>
