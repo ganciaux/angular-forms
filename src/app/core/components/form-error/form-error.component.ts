@@ -28,11 +28,11 @@ export class FormErrorComponent {
   }
 
   private defaultErrorMessages: { [key: string]: string } = {
-    required: 'This field is required',
-    minlength: 'The value is too short',
-    maxlength: 'The value is too long',
-    email: 'Please enter a valid email address',
-    pattern: 'The format is incorrect',
+    required: 'Le champs est obligatoire',
+    minlength: 'La longueur du texte est trop courte',
+    maxlength: 'La longueur du texte est trop longue',
+    email: `L'email n'est pas correct`,
+    pattern: `Le format attendu n'est pas correct`,
     //...
   }
 }

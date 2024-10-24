@@ -1,22 +1,57 @@
 <mat-sidenav-container fullscreen>
-  <mat-sidenav #start (click)="start.close()">
+  <mat-sidenav #start (click)="start.close()" (openedChange)="onSidenavToggle($event)">
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['users', 'account']" matTooltip="gestion du compte utilisateur">
-        <mat-icon>account_circle</mat-icon>
-        <span>Utilisateur:  {{authService.user()?.username}}</span>
-      </a>
-      <a mat-list-item routerLink="/" matTooltip="Liste des formulaire">
-        <mat-icon>library_books</mat-icon>
-        <span>Formulaires</span>
-      </a>
+
+      <mat-expansion-panel
+        class="app-expansion-panel"
+        (click)="toggleSidebar($event)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Utilisateur </mat-panel-title>
+        </mat-expansion-panel-header>
+        <a
+          mat-list-item
+          [routerLink]="['users', 'account']"
+          matTooltip="Gestion du compte utilisateur"
+          (click)="closeSidenav()"
+        >
+          <mat-icon>account_circle</mat-icon>
+          <span>Utilisateur: {{ authService.user()?.username }}</span>
+        </a>
+      </mat-expansion-panel>
+      <mat-expansion-panel
+        class="app-expansion-panel"
+        (click)="toggleSidebar($event)"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title> Formulaires </mat-panel-title>
+        </mat-expansion-panel-header>
+        <a
+          mat-list-item
+          [routerLink]="['/forms']"
+          matTooltip="Liste des formulaires"
+          (click)="closeSidenav()"
+        >
+          <mat-icon>library_books</mat-icon>
+          <span>Formulaires</span>
+        </a>
+        <a
+          mat-list-item
+          [routerLink]="['/forms/add']"
+          matTooltip="Ajouter un formulaire"
+          (click)="closeSidenav()"
+        >
+          <mat-icon>add_circle</mat-icon>
+          <span>Ajouter un formulaire</span>
+        </a>
+      </mat-expansion-panel>
     </mat-nav-list>
   </mat-sidenav>
-
   <mat-toolbar color="primary">
     <div class="toolbar-tools">
       @if(isLoggedIn()) {
       <button mat-icon-button (click)="start.open('mouse')">
-        <mat-icon>menu</mat-icon>
+        <mat-icon matTooltip="Menu utilisateur">menu</mat-icon>
       </button>
       }
       <div class="spacer"></div>
@@ -31,7 +66,6 @@
       }
     </div>
   </mat-toolbar>
-
   <div class="app-main-container">
     <app-loading />
     <app-messages />

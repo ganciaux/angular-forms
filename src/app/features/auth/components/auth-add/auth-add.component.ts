@@ -59,10 +59,9 @@ export class AuthAddComponent {
 
       this.isSubmitting.set(false)
       this.router.navigate(['/forms'])
-
     } catch (err) {
       this.formGroup.enable()
       this.messageService.showMessage(err as string, 'error')
-    } 
+    }
   }
 }

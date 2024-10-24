@@ -6,6 +6,10 @@
   padding-top: 20px;
 }
 
+.app-expansion-panel {
+  margin-bottom: 16px; /* Espace entre les panneaux */
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -115,4 +119,8 @@
 
 .mat-mdc-chip.form-status-archived .mdc-evolution-chip__text-label {
   color: #ba1a1a !important;
+}
+
+.app-expansion-panel {
+  margin-bottom: 16px !important;
 }
