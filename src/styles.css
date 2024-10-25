@@ -122,5 +122,9 @@
 }
 
 .app-expansion-panel {
-  margin-bottom: 16px !important;
+  margin: 16px !important;
+}
+
+.user-card{
+  max-width: 100%;
 }

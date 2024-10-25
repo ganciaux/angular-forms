@@ -41,8 +41,8 @@ export class UserService {
     return users.length > 0 ? users[0] : null
   }
 
-  getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.env.apiURL}/users`)
+  async getUsers(): Promise<User[]> {
+    return firstValueFrom(this.http.get<User[]>(`${this.env.apiURL}/users`))
   }
 
   updateUser(id: number, user: User): Observable<User> {

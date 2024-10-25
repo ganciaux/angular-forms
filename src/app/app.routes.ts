@@ -10,6 +10,7 @@ import { UserAccountComponent } from './features/user/components/user-account/us
 import { formResolver } from './features/form/resolvers/form.resolver'
 import { AuthComponent } from './features/auth/components/auth/auth.component'
 import { AuthAddComponent } from './features/auth/components/auth-add/auth-add.component'
+import { UserListComponent } from './features/user/components/user-list/user-list.component'
 
 export const routes: Routes = [
   {
@@ -28,6 +29,11 @@ export const routes: Routes = [
     path: 'users',
     canActivateChild: [authGuard],
     children: [
+      {
+        path: '',
+        component: UserListComponent,
+        title: 'user list',
+      },
       {
         path: 'account',
         component: UserAccountComponent,

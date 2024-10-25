@@ -11,12 +11,21 @@
         </mat-expansion-panel-header>
         <a
           mat-list-item
-          [routerLink]="['users', 'account']"
+          [routerLink]="['/users', 'account']"
           matTooltip="Gestion du compte utilisateur"
           (click)="closeSidenav()"
         >
           <mat-icon>account_circle</mat-icon>
           <span>Utilisateur: {{ authService.user()?.username }}</span>
+        </a>
+        <a
+          mat-list-item
+          [routerLink]="['/users']"
+          matTooltip="Liste des utilisateurs"
+          (click)="closeSidenav()"
+        >
+          <mat-icon>library_books</mat-icon>
+          <span>Utilisateurs</span>
         </a>
       </mat-expansion-panel>
       <mat-expansion-panel

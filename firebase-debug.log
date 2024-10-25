@@ -1,0 +1,237 @@
+[debug] [2024-10-25T05:40:19.904Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T05:40:19.906Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2024-10-25T05:40:19.906Z] CLI Version:   13.23.0
+[debug] [2024-10-25T05:40:19.906Z] Platform:      win32
+[debug] [2024-10-25T05:40:19.906Z] Node Version:  v20.11.0
+[debug] [2024-10-25T05:40:19.906Z] Time:          Fri Oct 25 2024 07:40:19 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2024-10-25T05:40:19.906Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T05:40:19.909Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] Already logged in as ghislain.anciaux@gmail.com
+[debug] [2024-10-25T05:40:20.256Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-10-25T05:40:20.257Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-10-25T05:40:29.966Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-25T05:45:49.322Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T05:45:49.325Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-25T05:45:49.325Z] CLI Version:   13.23.0
+[debug] [2024-10-25T05:45:49.325Z] Platform:      win32
+[debug] [2024-10-25T05:45:49.325Z] Node Version:  v20.11.0
+[debug] [2024-10-25T05:45:49.325Z] Time:          Fri Oct 25 2024 07:45:49 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2024-10-25T05:45:49.325Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T05:45:49.329Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T05:45:49.329Z] > authorizing via signed-in user (ghislain.anciaux@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Admin\Labs\angular\forms\angular-forms
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-25T05:46:49.460Z] Checked if tokens are valid: false, expires at: 1728033232449
+[debug] [2024-10-25T05:46:49.460Z] Checked if tokens are valid: false, expires at: 1728033232449
+[debug] [2024-10-25T05:46:49.460Z] > refreshing access token with scopes: []
+[debug] [2024-10-25T05:46:49.462Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-10-25T05:46:49.462Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T05:46:49.573Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-10-25T05:46:49.573Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-10-25T05:46:49.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-25T05:46:50.061Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-25T05:46:50.061Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project angular-forms-7eaa3 (angular-forms) 
+[info] 
+=== Hosting Setup
+[debug] [2024-10-25T05:46:52.679Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:46:52.679Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:46:52.679Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 [none]
+[debug] [2024-10-25T05:46:52.981Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 200
+[debug] [2024-10-25T05:46:52.982Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 {"projectId":"angular-forms-7eaa3","projectNumber":"1096864634865","displayName":"angular-forms","name":"projects/angular-forms-7eaa3","resources":{"hostingSite":"angular-forms-7eaa3"},"state":"ACTIVE","etag":"1_77fe4cf5-1913-4e27-9ad7-8f76a313c33c"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-10-25T05:50:18.240Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-10-25T05:50:18.296Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-10-25T05:50:18.296Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"11.0.1","browserURL":"https://www.gstatic.com/firebasejs/11.0.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/11.0.1/firebase.tgz"},"live":{"version":"11.0","browserURL":"https://www.gstatic.com/firebasejs/live/11.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/11.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/11.0.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/11.0.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/11.0.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/11.0.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/11.0.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/11.0.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/11.0.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/11.0.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/11.0.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js","vertexai":"https://www.gstatic.com/firebasejs/11.0.1/firebase-vertexai.js","data-connect":"https://www.gstatic.com/firebasejs/11.0.1/firebase-data-connect.js","firestore.memory":"https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.memory.js"}}
+[info] i  Skipping write of dist/angular-forms/browser/index.html 
+[info] 
+[info] i  Writing configuration info to firebase.json... 
+[info] i  Writing project information to .firebaserc... 
+[info] 
+[info] +  Firebase initialization complete! 
+[debug] [2024-10-25T05:50:46.911Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-10-25T05:52:18.318Z] ----------------------------------------------------------------------
+[debug] [2024-10-25T05:52:18.320Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-10-25T05:52:18.320Z] CLI Version:   13.23.0
+[debug] [2024-10-25T05:52:18.320Z] Platform:      win32
+[debug] [2024-10-25T05:52:18.320Z] Node Version:  v20.11.0
+[debug] [2024-10-25T05:52:18.320Z] Time:          Fri Oct 25 2024 07:52:18 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2024-10-25T05:52:18.320Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-25T05:52:18.362Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-25T05:52:18.363Z] > authorizing via signed-in user (ghislain.anciaux@gmail.com)
+[debug] [2024-10-25T05:52:18.363Z] [iam] checking project angular-forms-7eaa3 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-10-25T05:52:18.364Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:18.364Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:18.365Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-forms-7eaa3:testIamPermissions [none]
+[debug] [2024-10-25T05:52:18.365Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-forms-7eaa3:testIamPermissions x-goog-quota-user=projects/angular-forms-7eaa3
+[debug] [2024-10-25T05:52:18.365Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-forms-7eaa3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-25T05:52:19.096Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-forms-7eaa3:testIamPermissions 200
+[debug] [2024-10-25T05:52:19.096Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/angular-forms-7eaa3:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-10-25T05:52:19.097Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:19.097Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:19.097Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 [none]
+[debug] [2024-10-25T05:52:19.414Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 200
+[debug] [2024-10-25T05:52:19.415Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/angular-forms-7eaa3 {"projectId":"angular-forms-7eaa3","projectNumber":"1096864634865","displayName":"angular-forms","name":"projects/angular-forms-7eaa3","resources":{"hostingSite":"angular-forms-7eaa3"},"state":"ACTIVE","etag":"1_77fe4cf5-1913-4e27-9ad7-8f76a313c33c"}
+[info] 
+[info] === Deploying to 'angular-forms-7eaa3'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-10-25T05:52:19.422Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:19.422Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:19.422Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions [none]
+[debug] [2024-10-25T05:52:19.422Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-10-25T05:52:21.870Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions 200
+[debug] [2024-10-25T05:52:21.870Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions {"name":"projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[angular-forms-7eaa3]: beginning deploy... 
+[info] i  hosting[angular-forms-7eaa3]: found 9 files in dist/angular-forms/browser 
+[debug] [2024-10-25T05:52:40.497Z] [hosting] uploading with 200 concurrency
+[debug] [2024-10-25T05:52:40.498Z] [hosting] hash cache [ZGlzdFxhbmd1bGFyLWZvcm1zXGJyb3dzZXI] not populated
+[debug] [2024-10-25T05:52:40.520Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:40.520Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:40.521Z] [hosting] hash cache [ZGlzdFxhbmd1bGFyLWZvcm1zXGJyb3dzZXI] stored for 9 files
+[debug] [2024-10-25T05:52:40.521Z] [hosting][hash queue][FINAL] {"max":21,"min":5,"avg":7.666666666666667,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":22}
+[debug] [2024-10-25T05:52:40.522Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9:populateFiles [none]
+[debug] [2024-10-25T05:52:40.522Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/polyfills-FFHMD2TL.js":"736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35","/icons/delete.svg":"21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e","/index.html":"3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155","/icons/close.svg":"f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de","/styles-A5NUKRZ6.css":"b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72","/chunk-7DXVEX2W.js":"74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f","/chunk-BYRC37WZ.js":"0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf","/main-5RDYQK6K.js":"106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e"}}
+[debug] [2024-10-25T05:52:41.137Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9:populateFiles 200
+[debug] [2024-10-25T05:52:41.137Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9:populateFiles {"uploadRequiredHashes":["21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e","3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155","74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f","736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35","0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf","106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e","a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de","b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files"}
+[debug] [2024-10-25T05:52:41.138Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.138Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.139Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.139Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.139Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.139Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.140Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.141Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.141Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.141Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.141Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:41.142Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e [none]
+[debug] [2024-10-25T05:52:41.142Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e [stream]
+[debug] [2024-10-25T05:52:41.143Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155 [none]
+[debug] [2024-10-25T05:52:41.143Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155 [stream]
+[debug] [2024-10-25T05:52:41.144Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f [none]
+[debug] [2024-10-25T05:52:41.144Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f [stream]
+[debug] [2024-10-25T05:52:41.145Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35 [none]
+[debug] [2024-10-25T05:52:41.145Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35 [stream]
+[debug] [2024-10-25T05:52:41.146Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf [none]
+[debug] [2024-10-25T05:52:41.146Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf [stream]
+[debug] [2024-10-25T05:52:41.147Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e [none]
+[debug] [2024-10-25T05:52:41.147Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e [stream]
+[debug] [2024-10-25T05:52:41.148Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [none]
+[debug] [2024-10-25T05:52:41.148Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [stream]
+[debug] [2024-10-25T05:52:41.148Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de [none]
+[debug] [2024-10-25T05:52:41.148Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de [stream]
+[debug] [2024-10-25T05:52:41.149Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72 [none]
+[debug] [2024-10-25T05:52:41.149Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72 [stream]
+[debug] [2024-10-25T05:52:41.151Z] [hosting][populate queue][FINAL] {"max":621,"min":621,"avg":621,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":631}
+[debug] [2024-10-25T05:52:41.151Z] [hosting] uploads queued: 9
+[debug] [2024-10-25T05:52:42.041Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de 200
+[debug] [2024-10-25T05:52:42.041Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/f2ae5da92ed101a0d3ab656cbc104140f45ace55c0a03b9bd7fe46350c2266de [stream]
+[debug] [2024-10-25T05:52:42.043Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e 200
+[debug] [2024-10-25T05:52:42.044Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/21d875c4e3235fa5ecad936bf0806face26afd52f0fd9522f91210edfaf4db5e [stream]
+[debug] [2024-10-25T05:52:42.049Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 200
+[debug] [2024-10-25T05:52:42.049Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912 [stream]
+[debug] [2024-10-25T05:52:42.052Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35 200
+[debug] [2024-10-25T05:52:42.052Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35 [stream]
+[debug] [2024-10-25T05:52:42.054Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf 200
+[debug] [2024-10-25T05:52:42.054Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/0872c1a773455deb2c480532bc3b69bef67c71ea294d8319d4f2543b56fbc8cf [stream]
+[debug] [2024-10-25T05:52:42.144Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72 200
+[debug] [2024-10-25T05:52:42.145Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/b9f569d702e099070101622633beb6c7ad9f05288fea509c4aee9b9b76fccd72 [stream]
+[debug] [2024-10-25T05:52:42.173Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f 200
+[debug] [2024-10-25T05:52:42.173Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/74d4464e533f62c1a8d12fe391f0b1da19a1913e38bd3fd45627882f94173d5f [stream]
+[debug] [2024-10-25T05:52:42.207Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e 200
+[debug] [2024-10-25T05:52:42.207Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/106fca7d6b1eb152225e3babc5bf1b62b8abf93aa704ce66dbc6d5143366096e [stream]
+[debug] [2024-10-25T05:52:42.273Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155 200
+[debug] [2024-10-25T05:52:42.273Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9/files/3378b70f73178316d24eb63e9d9f6f0287a951f36d801bcfe92829e318fe1155 [stream]
+[debug] [2024-10-25T05:52:42.274Z] [hosting][upload queue][FINAL] {"max":1134,"min":902,"avg":975.7777777777778,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":1136}
+[info] +  hosting[angular-forms-7eaa3]: file upload complete 
+[debug] [2024-10-25T05:52:42.276Z] [hosting] deploy completed after 1789ms
+[debug] [2024-10-25T05:52:42.276Z] [
+  {
+    "config": {
+      "public": "dist/angular-forms/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "angular-forms-7eaa3"
+    },
+    "version": "projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9"
+  }
+]
+[info] i  hosting[angular-forms-7eaa3]: finalizing version... 
+[debug] [2024-10-25T05:52:42.280Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:42.281Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:42.282Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9 updateMask=status%2Cconfig
+[debug] [2024-10-25T05:52:42.282Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-10-25T05:52:43.526Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9 200
+[debug] [2024-10-25T05:52:43.526Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9 {"name":"projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-10-25T05:52:20.461748Z","createUser":{"email":"ghislain.anciaux@gmail.com"},"finalizeTime":"2024-10-25T05:52:43.414264Z","finalizeUser":{"email":"ghislain.anciaux@gmail.com"}}
+[debug] [2024-10-25T05:52:43.526Z] [hosting] finalized version for angular-forms-7eaa3:[object Object]
+[info] +  hosting[angular-forms-7eaa3]: version finalized 
+[info] i  hosting[angular-forms-7eaa3]: releasing new version... 
+[debug] [2024-10-25T05:52:43.528Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:43.529Z] Checked if tokens are valid: true, expires at: 1729838808573
+[debug] [2024-10-25T05:52:43.530Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/channels/live/releases versionName=projects%2F1096864634865%2Fsites%2Fangular-forms-7eaa3%2Fversions%2F81136bd200ba3bc9
+[debug] [2024-10-25T05:52:43.530Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/channels/live/releases {}
+[debug] [2024-10-25T05:52:44.725Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/channels/live/releases 200
+[debug] [2024-10-25T05:52:44.726Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/angular-forms-7eaa3/channels/live/releases {"name":"projects/1096864634865/sites/angular-forms-7eaa3/channels/live/releases/1729835563962000","version":{"name":"projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-10-25T05:52:20.461748Z","createUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"},"finalizeTime":"2024-10-25T05:52:43.414264Z","finalizeUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"}},"type":"DEPLOY","releaseTime":"2024-10-25T05:52:43.962Z","releaseUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"}}
+[debug] [2024-10-25T05:52:44.726Z] [hosting] release: {"name":"projects/1096864634865/sites/angular-forms-7eaa3/channels/live/releases/1729835563962000","version":{"name":"projects/1096864634865/sites/angular-forms-7eaa3/versions/81136bd200ba3bc9","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-10-25T05:52:20.461748Z","createUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"},"finalizeTime":"2024-10-25T05:52:43.414264Z","finalizeUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"}},"type":"DEPLOY","releaseTime":"2024-10-25T05:52:43.962Z","releaseUser":{"email":"ghislain.anciaux@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJZ1xuYob-RGtk4pI33tJfq4NXWRv_sxi6gluBI5JQ7fjvreA=mo"}}
+[info] +  hosting[angular-forms-7eaa3]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/angular-forms-7eaa3/overview
+[info] Hosting URL: https://angular-forms-7eaa3.web.app
+[debug] [2024-10-25T05:53:15.793Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Admin\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.

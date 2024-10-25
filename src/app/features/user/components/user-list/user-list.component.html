@@ -1,0 +1,4 @@
+<h3>Liste des utilisateurs</h3>
+@for(user of userList(); track user.id){
+    <app-user-card [user]="user"/>
+}

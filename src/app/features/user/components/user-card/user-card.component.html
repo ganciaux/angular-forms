@@ -1,0 +1,23 @@
+<mat-card class="user-card" appearance="outlined">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>{{user().name}}</mat-card-title>
+    <mat-card-subtitle>{{user().name}}</mat-card-subtitle>
+  </mat-card-header>
+  @if(user().profileImageUrl){
+  <img
+    mat-card-image
+    [src]="user().profileImageUrl"
+    [alt]="user().name"
+  />
+}
+  <mat-card-content>
+    <p>
+      todo: get some details...
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Modifier</button>
+    <button mat-button>Supprimer</button>
+  </mat-card-actions>
+</mat-card>
