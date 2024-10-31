@@ -1,0 +1,3 @@
+CREATE USER 'ganciaux'@'%' IDENTIFIED BY 'ganciaux';
+GRANT ALL PRIVILEGES ON *.* TO 'ganciaux'@'%';
+FLUSH PRIVILEGES;
