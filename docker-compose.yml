@@ -15,24 +15,22 @@ services:
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/forms  # Remplacez par le nom du service
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/forms
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: ganciaux
-      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_PASSWORD: root
     depends_on:
       - mysql-db
 
   mysql-db:
-    image: mysql:9
+    image: mysql:8
     container_name: mysql-db
     environment:
-      MYSQL_ROOT_PASSWORD: ganciaux
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: forms
       MYSQL_ROOT_HOST: "%"
     ports:
       - "3306:3306"
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - mysql-data:/var/lib/mysql
 
 volumes:
