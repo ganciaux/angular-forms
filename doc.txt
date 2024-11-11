@@ -1,1 +1,28 @@
 docker-compose up --build
+
+#properties file
+data.value
+
+@Value("${data.value}")
+
+Attention:
+ne pas utiliser src/main/webapp si l'application est un jar
+
+Settings / build / compiler / build project auto
+Settings / advanced / allow auto-make
+
+#properties file
+management.endpoints.web.exposure.include=health, info
+management.info.env.enabled=true
+
+mvnw package
+mvnw spring-boot:run
+
+
+IOC inversion of controle: deleguer la creation d'objet
+DI dependency injection: 
+
+@Autowired est optionnel si un seul constructeur
+
+spring scan les classes @Component et les enregistre en tant que bean dans le spring container
+Attention scan par defaut que la package courant
