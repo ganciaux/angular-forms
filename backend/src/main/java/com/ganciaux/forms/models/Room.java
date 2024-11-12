@@ -13,6 +13,6 @@ public class Room {
     private String name;
 
     @OneToMany(mappedBy="room")
-    List<Student> students;
+    List<Students> students;
 
 }

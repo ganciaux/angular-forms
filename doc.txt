@@ -48,3 +48,14 @@ LifeCyle bean:
 @PreDestroy
 
 For "prototype" scoped beans, Spring does not call the destroy method.
+
+Hibernate: framework pour enregistrer de objet java dans la bdd (Object to Relation Mapping)
+JPA Jakarta Persistance Api: standard api for ORM
+
+@Entity + constructeur sans argument (public / protected)
+
+Generete custom identifier:
+Implements org.hibernate.id.IdentiferGenerator
+Override public Serialiazable generate(...)
+
+DAO: Data Access Object

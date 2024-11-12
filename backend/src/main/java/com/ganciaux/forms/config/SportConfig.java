@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SportConfig {
-    //defined aquatic as Bean id or default is swimCoach
+    //defined 'aquatic' as Bean id or default is 'swimCoach' about @Qualifier
     @Bean("aquatic")
     public Coach swimCoach() {
         return new SwimCoach();
