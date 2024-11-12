@@ -18,11 +18,33 @@ management.info.env.enabled=true
 mvnw package
 mvnw spring-boot:run
 
-
 IOC inversion of controle: deleguer la creation d'objet
 DI dependency injection: 
 
 @Autowired est optionnel si un seul constructeur
 
 spring scan les classes @Component et les enregistre en tant que bean dans le spring container
-Attention scan par defaut que la package courant
+Attention scan par defaut que le package courant
+
+@SpringBootApplication(scanBasePackages = {
+        "com.ganciaux.forms",
+        "com.ganciaux.utils"})
+
+@Primary si plusieures classe l'annotation defini celle qui sera prioritaire
+@Qualifier("className") Classname variable; 
+- className premier caractère en minuscule 
+- priorité superieure à @Primary
+- se place devant le paramètre
+@Lazy initialisé seulement si utilisé dans l'injection de dependence
+- spring.main.lazy-spring-initialization=true
+-> Lancement plus rapide de l'application et créé seulement qd necessaire (desactivée par defaut)
+
+Bean: la porté par defaut et le singleton (une seule instance, référence le meme bean, partagé avec les autres éléments)
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+- singleton / prototype / request / session / application / websocket
+
+LifeCyle bean:
+@PostConstruct
+@PreDestroy
+
+For "prototype" scoped beans, Spring does not call the destroy method.
