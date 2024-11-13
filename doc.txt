@@ -21,7 +21,7 @@ mvnw spring-boot:run
 IOC inversion of controle: deleguer la creation d'objet
 DI dependency injection: 
 
-@Autowired est optionnel si un seul constructeur
+@Autowired est optionnel si un seul constructeur (utilisée pour effectuer de l'injection de dépendances automatique)
 
 spring scan les classes @Component et les enregistre en tant que bean dans le spring container
 Attention scan par defaut que le package courant
