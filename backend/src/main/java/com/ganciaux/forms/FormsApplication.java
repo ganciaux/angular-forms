@@ -27,6 +27,8 @@ public class FormsApplication {
             readStudent(studentDAO);
             getStudent(studentDAO);
             getStudentByLastName(studentDAO);
+            updateStudent(studentDAO);
+            deleteStudent(studentDAO);
         };
     }
 
@@ -58,4 +60,16 @@ public class FormsApplication {
 
     }
 
+    private void updateStudent(StudentDAO studentDAO){
+        Student Id=studentDAO.findById(1);
+        Id.setLastName("luffy");
+        studentDAO.update(Id);
+        Id=studentDAO.findById(1);
+        System.out.println("Updated student..."+Id);
+    }
+
+    private void deleteStudent(StudentDAO studentDAO){
+        System.out.println("Delete all students...");
+        studentDAO.delete();
+    }
 }

@@ -59,3 +59,14 @@ Implements org.hibernate.id.IdentiferGenerator
 Override public Serialiazable generate(...)
 
 DAO: Data Access Object
+REST: REpresentational State Transfert
+
+@RestController
+@RequestMapping("/api")
+class()
+{
+  @GetMapping("/students/{id}")
+  foo(@PathVariable int id)
+}
+ 
+path variables
