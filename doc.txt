@@ -67,6 +67,11 @@ class()
 {
   @GetMapping("/students/{id}")
   foo(@PathVariable int id)
+
+  @PostMapping("/students")
+  foo(@RequestBody student students)
+
+  Optional<T> result=...;
+  if(result.isPresent()){T data=result.get();}
 }
  
-path variables

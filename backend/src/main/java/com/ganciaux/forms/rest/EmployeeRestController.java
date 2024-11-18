@@ -1,12 +1,12 @@
 package com.ganciaux.forms.rest;
 
-import com.ganciaux.forms.dao.EmployeeDAO;
 import com.ganciaux.forms.entity.Employee;
 import com.ganciaux.forms.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -23,7 +23,7 @@ public class EmployeeRestController {
     }
 
     @GetMapping("employees/{id}")
-    Employee findById(@PathVariable String id){
+    Optional<Employee> findById(@PathVariable int id){
         return employeeService.findById(id);
     }
 

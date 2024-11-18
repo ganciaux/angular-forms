@@ -1,35 +1,36 @@
 package com.ganciaux.forms.service;
 
-import com.ganciaux.forms.dao.EmployeeDAO;
+import com.ganciaux.forms.dao.EmployeeRepository;
 import com.ganciaux.forms.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
-    private EmployeeDAO employeeDAO;
+    private EmployeeRepository em;
 
     @Autowired
-    public EmployeeServiceImpl(EmployeeDAO employeeDAO){
-        this.employeeDAO = employeeDAO;
+    public EmployeeServiceImpl(EmployeeRepository employeeDAO){
+        this.em = employeeDAO;
     }
     @Override
     public List<Employee> findAll(){
-        return employeeDAO.findAll();
+        return em.findAll();
     }
 
     @Override
-    public Employee findById(String id){
-        return employeeDAO.findById(id);
+    public Optional<Employee> findById(int id){
+        return em.findById(id);
     }
 
     @Override
-    public Employee save(Employee employee){return employeeDAO.save(employee);}
+    public Employee save(Employee employee){return em.save(employee);}
 
     @Override
     public void deleteById(int id){
-        employeeDAO.deleteById(id);
+        em.deleteById(id);
     }
 }
