@@ -4,9 +4,7 @@ import com.ganciaux.forms.dao.EmployeeDAO;
 import com.ganciaux.forms.entity.Employee;
 import com.ganciaux.forms.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,16 @@ public class EmployeeRestController {
     @GetMapping("employees")
     List<Employee> findAll(){
         return employeeService.findAll();
+    }
+
+    @GetMapping("employees/{id}")
+    Employee findById(@PathVariable String id){
+        return employeeService.findById(id);
+    }
+
+    @PostMapping("employees")
+    Employee addEmployee(@RequestBody Employee employee){
+        employee.setId(0);
+        return employeeService.save(employee);
     }
 }
