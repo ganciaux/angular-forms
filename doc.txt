@@ -75,3 +75,6 @@ class()
   if(result.isPresent()){T data=result.get();}
 }
  
+ @RepositoryRestResource(path = "members")
+ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {}
+base-url/employees -> base-url/members
